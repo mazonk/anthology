@@ -1,26 +1,47 @@
 <template>
   <div class="menu">
-    <router-link to="/" class="menuButton">Home</router-link>
-    <router-link to="/about" class="menuButton">About</router-link>
-    <router-link to="/projects" class="menuButton">Projects</router-link>
-    <router-link to="/skills" class="menuButton">Skills</router-link>
-    <router-link to="/contact" class="menuButton">Contact</router-link>
+    <RouterLink to="/" class="menuButton" ref="homeButton">Home</RouterLink>
+    <RouterLink to="/about" class="menuButton" ref="aboutButton">About</RouterLink>
+    <RouterLink to="/projects" class="menuButton" ref="projectsButton">Projects</RouterLink>
+    <RouterLink to="/skills" class="menuButton" ref="skillsButton">Skills</RouterLink>
+    <RouterLink to="/contact" class="menuButton" ref="contactButton">Contact</RouterLink>
     <!-- Buttons with icons -->
     <a href="https://www.linkedin.com/" target="_blank" class="menuButton"><i class="fab fa-linkedin"></i> LinkedIn</a>
-    <a href="https://github.com/" target="_blank" class="menuButton"><i class="fab fa-github"></i> GitHub</a>
-<!--
-    <a href="https://github.com/" target="_blank" class="menuButton">
-      <img src="@/assets/github.jpg" alt="GitHub" class="icon gitHub">
-      GitHub
-    </a>-->
+    <a href="https://www.github.com/" target="_blank" class="menuButton"><i class="fab fa-github"></i> GitHub</a>
   </div>
-  <h1>
-    Welcome.
-  </h1>
 </template>
 
 <script setup lang="ts">
 import { RouterLink } from 'vue-router';
+import { ref } from 'vue';
+import { gsap } from 'gsap';
+import { Ref, onMounted } from 'vue';
+
+const homeButton: Ref<HTMLElement | null> = ref(null);
+const aboutButton: Ref<HTMLElement | null> = ref(null);
+const projectsButton: Ref<HTMLElement | null> = ref(null);
+const skillsButton: Ref<HTMLElement | null> = ref(null);
+const contactButton: Ref<HTMLElement | null> = ref(null);
+const githubButton: Ref<HTMLElement | null> = ref(null);
+
+onMounted(() => {
+  animateButtons();
+});
+
+function animateButtons() {
+  const buttons = [homeButton, aboutButton, projectsButton, skillsButton, contactButton, githubButton];
+
+  buttons.forEach((button, index) => {
+    if (button.value) {
+      gsap.from(button.value, {
+        y: '-20px',
+        opacity: 0,
+        duration: 0.5,
+        delay: index * 0.1
+      });
+    }
+  });
+}
 </script>
 
 <style scoped>
@@ -30,35 +51,26 @@ import { RouterLink } from 'vue-router';
   width: 100%; /* Set the menu container to full width */
   background-color: rgba(0, 0, 0, 0.8); /* Add a background color with some transparency */
   display: flex;
+  margin-bottom: 1vw;
   justify-content: center; /* Center the menu horizontally */
   z-index: 1000; /* Ensure the menu is above other elements */
+  left: 0;
 }
 
 .menu a {
-  margin: 10px; /* Add some spacing between menu items */
+  margin: 0 10px; /* Add some spacing between menu items */
   border-radius: 3vw;
-  margin-top: 1.5vw;
-  border: 1px solid white; /* Set border style */
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+  /*border: 1px solid white; /* Set border style */
   padding: 8px 16px; /* Add padding for better appearance */
   font-weight: bold; /* Set font weight */
   text-decoration: none; /* Remove default underline */
   color: white; /* Set text color */
+  transition: background-color 0.3s; /* Add transition for background-color */
 }
 
 .menu a:hover {
-  background-color: #BE3455;
-}
-
-/* Style for Font Awesome icons */
-.menu i {
-  margin-right: 5px; /* Add some spacing between icon and text */
-}
-
-/* Style for GitHub icon */
-.menu .icon.gitHub {
-  width: 2.5vw; /* Adjust the width of the GitHub icon */
-  height: auto; /* Maintain aspect ratio */
-  margin-right: 5px; /* Add some spacing between icon and text */
+  background-color: #BE3455; /* Change background color on hover */
 }
 </style>
-
