@@ -3,6 +3,7 @@
       <Menu /> <!-- Include the Menu component directly -->
       <h1>Contact Us</h1>
       <!-- Add your contact form or other content here -->
+      <Footer />
     </div>
   </template>
   

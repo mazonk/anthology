@@ -19,9 +19,9 @@ body {
 } */
 
 body {
-  background-color: #0a0a0a;
+  background-color: black;
   color: #EEE3C1;
-  font-family: "Neue Haas Grotesk Text Bd", Helvetica, "Helvetica Neue", Arial, sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   line-height: 1;
   font-weight: bold;
   transition: .2s;
@@ -29,11 +29,11 @@ body {
 }
 
 p {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 h1 {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-size: large;
   color: #BE3455;
   font-weight: bold;

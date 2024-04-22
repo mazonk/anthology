@@ -1,76 +1,56 @@
 <template>
-  <div class="menu">
-    <RouterLink to="/" class="menuButton" ref="homeButton">Home</RouterLink>
-    <RouterLink to="/about" class="menuButton" ref="aboutButton">About</RouterLink>
-    <RouterLink to="/projects" class="menuButton" ref="projectsButton">Projects</RouterLink>
-    <RouterLink to="/skills" class="menuButton" ref="skillsButton">Skills</RouterLink>
-    <RouterLink to="/contact" class="menuButton" ref="contactButton">Contact</RouterLink>
-    <!-- Buttons with icons -->
-    <a href="https://www.linkedin.com/" target="_blank" class="menuButton"><i class="fab fa-linkedin"></i> LinkedIn</a>
-    <a href="https://www.github.com/" target="_blank" class="menuButton"><i class="fab fa-github"></i> GitHub</a>
+  <div class="home-view">
+    <Menu /> <!-- Include the Menu component directly -->
+    
+    <div class="content">
+      <h1>Welcome to my website!</h1>
+      <p>Who am I?</p>
+      <div class="lorem-ipsum">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et dapibus lorem. Phasellus quis fermentum neque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed in consectetur mauris. Donec vel purus nulla. Fusce lobortis id nisi vitae bibendum. Nam in dapibus felis. Suspendisse potenti. Integer rhoncus ipsum nisi, sit amet vehicula arcu auctor id. Donec ultrices eget tortor eget eleifend.</p>
+      <p>Phasellus hendrerit ligula vel leo volutpat, in aliquam risus tristique. Cras id tincidunt odio. Nam nec justo vel magna efficitur malesuada. Maecenas dapibus felis non aliquet dignissim. Nulla facilisi. Suspendisse potenti. Nam sit amet sodales ipsum, et rhoncus nulla. Proin ultrices, magna in ultricies convallis, massa arcu ultrices sem, non gravida risus dolor non enim. Duis vel nisi sed dui vehicula rhoncus.</p>
+      <p>Maecenas varius efficitur tellus, in lobortis lorem feugiat id. Nulla sit amet tempus mi. Aliquam erat volutpat. Nulla facilisi. Integer hendrerit nisl in justo finibus, et sodales elit faucibus. Proin blandit dui at ipsum efficitur, ut scelerisque sem tempus. Morbi tincidunt libero ut urna laoreet, non sodales ligula dictum. Phasellus venenatis, sapien et volutpat pellentesque, mi nunc ultrices felis, in scelerisque eros lacus id justo. Morbi rutrum vestibulum ex eget lobortis.</p>
+      <p>Vivamus id metus vel ante fringilla pellentesque nec nec mauris. Aliquam ac libero justo. Nam nec diam eu felis luctus volutpat. Suspendisse potenti. Cras venenatis felis vel enim bibendum, vel commodo mauris lacinia. Duis mattis tortor at justo congue, nec congue arcu faucibus. Morbi et ipsum consequat, fringilla arcu ac, fermentum ex. Phasellus at dolor vitae magna commodo lacinia.</p>
+      <p>Quisque eget felis ultrices, suscipit dui eget, luctus leo. Nulla facilisi. Vivamus tristique neque nec libero auctor venenatis. Proin quis lectus urna. Aliquam ac malesuada enim. Integer tincidunt mauris odio, eu aliquam libero blandit a. Proin rutrum, metus non commodo varius, nulla erat egestas purus, id vestibulum odio magna nec magna. Nulla facilisi.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et dapibus lorem. Phasellus quis fermentum neque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed in consectetur mauris. Donec vel purus nulla. Fusce lobortis id nisi vitae bibendum. Nam in dapibus felis. Suspendisse potenti. Integer rhoncus ipsum nisi, sit amet vehicula arcu auctor id. Donec ultrices eget tortor eget eleifend.</p>
+      <p>Phasellus hendrerit ligula vel leo volutpat, in aliquam risus tristique. Cras id tincidunt odio. Nam nec justo vel magna efficitur malesuada. Maecenas dapibus felis non aliquet dignissim. Nulla facilisi. Suspendisse potenti. Nam sit amet sodales ipsum, et rhoncus nulla. Proin ultrices, magna in ultricies convallis, massa arcu ultrices sem, non gravida risus dolor non enim. Duis vel nisi sed dui vehicula rhoncus.</p>
+      <p>Maecenas varius efficitur tellus, in lobortis lorem feugiat id. Nulla sit amet tempus mi. Aliquam erat volutpat. Nulla facilisi. Integer hendrerit nisl in justo finibus, et sodales elit faucibus. Proin blandit dui at ipsum efficitur, ut scelerisque sem tempus. Morbi tincidunt libero ut urna laoreet, non sodales ligula dictum. Phasellus venenatis, sapien et volutpat pellentesque, mi nunc ultrices felis, in scelerisque eros lacus id justo. Morbi rutrum vestibulum ex eget lobortis.</p>
+      <p>Vivamus id metus vel ante fringilla pellentesque nec nec mauris. Aliquam ac libero justo. Nam nec diam eu felis luctus volutpat. Suspendisse potenti. Cras venenatis felis vel enim bibendum, vel commodo mauris lacinia. Duis mattis tortor at justo congue, nec congue arcu faucibus. Morbi et ipsum consequat, fringilla arcu ac, fermentum ex. Phasellus at dolor vitae magna commodo lacinia.</p>
+      <p>Quisque eget felis ultrices, suscipit dui eget, luctus leo. Nulla facilisi. Vivamus tristique neque nec libero auctor venenatis. Proin quis lectus urna. Aliquam ac malesuada enim. Integer tincidunt mauris odio, eu aliquam libero blandit a. Proin rutrum, metus non commodo varius, nulla erat egestas purus, id vestibulum odio magna nec magna. Nulla facilisi.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et dapibus lorem. Phasellus quis fermentum neque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed in consectetur mauris. Donec vel purus nulla. Fusce lobortis id nisi vitae bibendum. Nam in dapibus felis. Suspendisse potenti. Integer rhoncus ipsum nisi, sit amet vehicula arcu auctor id. Donec ultrices eget tortor eget eleifend.</p>
+      <p>Phasellus hendrerit ligula vel leo volutpat, in aliquam risus tristique. Cras id tincidunt odio. Nam nec justo vel magna efficitur malesuada. Maecenas dapibus felis non aliquet dignissim. Nulla facilisi. Suspendisse potenti. Nam sit amet sodales ipsum, et rhoncus nulla. Proin ultrices, magna in ultricies convallis, massa arcu ultrices sem, non gravida risus dolor non enim. Duis vel nisi sed dui vehicula rhoncus.</p>
+      <p>Maecenas varius efficitur tellus, in lobortis lorem feugiat id. Nulla sit amet tempus mi. Aliquam erat volutpat. Nulla facilisi. Integer hendrerit nisl in justo finibus, et sodales elit faucibus. Proin blandit dui at ipsum efficitur, ut scelerisque sem tempus. Morbi tincidunt libero ut urna laoreet, non sodales ligula dictum. Phasellus venenatis, sapien et volutpat pellentesque, mi nunc ultrices felis, in scelerisque eros lacus id justo. Morbi rutrum vestibulum ex eget lobortis.</p>
+      <p>Vivamus id metus vel ante fringilla pellentesque nec nec mauris. Aliquam ac libero justo. Nam nec diam eu felis luctus volutpat. Suspendisse potenti. Cras venenatis felis vel enim bibendum, vel commodo mauris lacinia. Duis mattis tortor at justo congue, nec congue arcu faucibus. Morbi et ipsum consequat, fringilla arcu ac, fermentum ex. Phasellus at dolor vitae magna commodo lacinia.</p>
+      <p>Quisque eget felis ultrices, suscipit dui eget, luctus leo. Nulla facilisi. Vivamus tristique neque nec libero auctor venenatis. Proin quis lectus urna. Aliquam ac malesuada enim. Integer tincidunt mauris odio, eu aliquam libero blandit a. Proin rutrum, metus non commodo varius, nulla erat egestas purus, id vestibulum odio magna nec magna. Nulla facilisi.</p>
+      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In commodo tortor sit amet ipsum luctus, eget feugiat est sodales. Cras vestibulum ante non diam lacinia, vitae tristique enim lacinia. Proin sodales consectetur velit at malesuada. Maecenas venenatis, nisi et fermentum condimentum, turpis ligula suscipit elit, vel fringilla felis felis ut quam. Integer id velit nec dui dapibus sodales. Fusce et laoreet odio. Donec tincidunt eros id risus fringilla, a accumsan urna tempus.</p>
+      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In commodo tortor sit amet ipsum luctus, eget feugiat est sodales. Cras vestibulum ante non diam lacinia, vitae tristique enim lacinia. Proin sodales consectetur velit at malesuada. Maecenas venenatis, nisi et fermentum condimentum, turpis ligula suscipit elit, vel fringilla felis felis ut quam. Integer id velit nec dui dapibus sodales. Fusce et laoreet odio. Donec tincidunt eros id risus fringilla, a accumsan urna tempus.</p>
+      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In commodo tortor sit amet ipsum luctus, eget feugiat est sodales. Cras vestibulum ante non diam lacinia, vitae tristique enim lacinia. Proin sodales consectetur velit at malesuada. Maecenas venenatis, nisi et fermentum condimentum, turpis ligula suscipit elit, vel fringilla felis felis ut quam. Integer id velit nec dui dapibus sodales. Fusce et laoreet odio. Donec tincidunt eros id risus fringilla, a accumsan urna tempus.</p>
+    </div>
+    </div>
+    <Footer />
   </div>
 </template>
 
-<script setup lang="ts">
-import { RouterLink } from 'vue-router';
-import { ref } from 'vue';
+<script setup>
+import Menu from '@/components/Menu.vue';
+import Footer from "@/components/Footer.vue";
 import { gsap } from 'gsap';
-import { Ref, onMounted } from 'vue';
-
-const homeButton: Ref<HTMLElement | null> = ref(null);
-const aboutButton: Ref<HTMLElement | null> = ref(null);
-const projectsButton: Ref<HTMLElement | null> = ref(null);
-const skillsButton: Ref<HTMLElement | null> = ref(null);
-const contactButton: Ref<HTMLElement | null> = ref(null);
-const githubButton: Ref<HTMLElement | null> = ref(null);
+import { onMounted } from 'vue';
 
 onMounted(() => {
-  animateButtons();
+  // Animate the content opacity when the component is mounted
+  gsap.to('.content', { opacity: 1, duration: 0.5, ease: 'power2.inOut' });
 });
-
-function animateButtons() {
-  const buttons = [homeButton, aboutButton, projectsButton, skillsButton, contactButton, githubButton];
-
-  buttons.forEach((button, index) => {
-    if (button.value) {
-      gsap.from(button.value, {
-        y: '-20px',
-        opacity: 0,
-        duration: 0.5,
-        delay: index * 0.1
-      });
-    }
-  });
-}
 </script>
 
 <style scoped>
-.menu {
-  position: fixed; /* Fix the menu container in place */
-  top: 0; /* Align the menu container to the top of the viewport */
-  width: 100%; /* Set the menu container to full width */
-  background-color: rgba(0, 0, 0, 0.8); /* Add a background color with some transparency */
-  display: flex;
-  margin-bottom: 1vw;
-  justify-content: center; /* Center the menu horizontally */
-  z-index: 1000; /* Ensure the menu is above other elements */
-  left: 0;
+.home-view {
+  opacity: 0; /* Set initial opacity to 0 */
+  transition: opacity 0.5s ease-in-out; /* Add a transition effect to fade in/out the content */
 }
 
-.menu a {
-  margin: 0 10px; /* Add some spacing between menu items */
-  border-radius: 3vw;
-  margin-top: 1vw;
-  margin-bottom: 1vw;
-  /*border: 1px solid white; /* Set border style */
-  padding: 8px 16px; /* Add padding for better appearance */
-  font-weight: bold; /* Set font weight */
-  text-decoration: none; /* Remove default underline */
-  color: white; /* Set text color */
-  transition: background-color 0.3s; /* Add transition for background-color */
-}
-
-.menu a:hover {
-  background-color: #BE3455; /* Change background color on hover */
+.lorem-ipsum {
+  color:white;
+  font-weight: bold;
+  
 }
 </style>
