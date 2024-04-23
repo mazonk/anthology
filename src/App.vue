@@ -1,6 +1,9 @@
 <template>
   <div class="app">
-    <Menu /> <!-- Include the Menu component directly -->
+    <div class="image-container">
+      <img src="@/assets/header.jpg" alt="About Image" ref="aboutImage" />
+    </div>
+    <Menu />
     <div class="content">
       <router-view></router-view>
     </div>
@@ -11,6 +14,8 @@
 <script setup>
 import Menu from '@/components/Menu.vue';
 import Footer from '@/components/Footer.vue';
+import { gsap } from 'gsap';
+import { onBeforeRouteLeave } from 'vue-router';
 </script>
 
 <style scoped>
@@ -21,8 +26,25 @@ import Footer from '@/components/Footer.vue';
 }
 
 .content {
-  flex: 1; /* Take up remaining vertical space */
-  padding-top: 100vw; /* Adjust the value according to your header's height */
-  overflow-y: auto; /* Enable vertical scrolling when content overflows */
+  flex: 1;
+  padding-top: 10vw;
+  overflow-y: auto;
+  margin-left: 0.5vw;
+  margin-right: 0.5vw;
+}
+
+.image-container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw; /* Take up the full width of the viewport */
+  height: 100vh; /* Take up the full height of the viewport */
+  z-index: -1; /* Ensure the image is behind other content */
+}
+
+.image-container img {
+  width: 100%; /* Make sure the image fills the container */
+  height: 100%; /* Make sure the image fills the container */
+  object-fit: cover; /* Maintain aspect ratio and cover the entire container */
 }
 </style>

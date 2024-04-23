@@ -1,8 +1,6 @@
 <template>
     <div class="layout">
-      <!-- Include the Menu component -->
       <Menu />
-      <!-- Your router view and footer -->
       <router-view></router-view>
       <Footer />
     </div>
@@ -15,11 +13,10 @@
   
   <style scoped>
   .layout {
-    /* Set the background image and position */
-    background-image: url('path_to_your_image.jpg');
+    /* Specify the local image path */
+    background-image: url('@/assets/header.jpg');
     background-size: cover;
     background-position: center;
-    /* Add other styles for layout if needed */
   }
   </style>
   

@@ -10,7 +10,11 @@
 import { RouterLink } from 'vue-router';
 import Menu from '@/components/Menu.vue';
 import Footer from '@/components/Footer.vue';
+import { onMounted } from 'vue';
 
+onMounted(() => {
+  window.scrollTo(0, 0);
+});
 </script>
 <style scoped>
 .projects {

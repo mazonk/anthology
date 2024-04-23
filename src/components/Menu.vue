@@ -33,9 +33,8 @@ function animateMenu() {
       duration: 0.5,
       stagger: 0.1,
       ease: 'power2.out',
+      onComplete: () => sessionStorage.setItem('menuAnimated', 'true')
     });
-    
-    sessionStorage.setItem('menuAnimated', 'true');
   }
 }
 
@@ -50,9 +49,6 @@ window.addEventListener('beforeunload', () => {
   position: fixed; /* Fix the menu container in place */
   top: 0; /* Align the menu container to the top of the viewport */
   width: 100%; /* Set the menu container to full width */
-  background-image: url('https://4kwallpapers.com/images/wallpapers/lake-mountains-rocks-twilight-sunset-purple-sky-pink-sky-1920x1080-3775.jpg');
-  background-size: cover;
-  background-position: top;
   display: flex;
   margin-bottom: 2vw;
   justify-content: center; /* Center the menu horizontally */
@@ -67,8 +63,7 @@ window.addEventListener('beforeunload', () => {
   margin-bottom: 25%;
   padding: 8px 16px; /* Add padding for better appearance */
   font-weight: bold; /* Set font weight */
-  text-decoration: none; /* Remove default underline */
-  color: white; /* Set text color */
+  color: orange; /* Set text color */
   transition: background-color 0.3s; /* Add transition for background-color */
 }
 

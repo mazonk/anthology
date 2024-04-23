@@ -14,7 +14,8 @@
     bottom: 5vw;
     width: 100%;
     z-index: 1000;
-    background-image: url('https://static.vecteezy.com/system/resources/previews/010/933/191/non_2x/landscape-background-nature-illustration-free-vector.jpg');
+    /* Specify the local image path */
+    background-image: url('@/assets/footer.jpg');
     background-size: cover;
   }
   </style>
