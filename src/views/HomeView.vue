@@ -41,5 +41,7 @@ onMounted(() => {
 </script>
 
 <style scoped>
-/* Add your styles here */
+.h1{
+  color: #F28729;
+}
 </style>

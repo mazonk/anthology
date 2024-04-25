@@ -20,7 +20,7 @@ body {
 
 body {
   background-color: black;
-  color: #EEE3C1;
+  color: #269197;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   line-height: 1;
   font-weight: bold;
@@ -30,13 +30,13 @@ body {
 
 p {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #E0D9F6;
 }
 
 h1 {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-size: large;
-  color: #BE3455;
-  font-weight: bold;
+  font-weight: bolder;
+  color: #29D9D9 ;
 }
 
 @media (min-width: 1024px) {

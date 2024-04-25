@@ -1,10 +1,10 @@
 <template>
-  <div class="app">
-    <div class="image-container">
-      <img src="@/assets/header.jpg" alt="About Image" ref="aboutImage" />
+  <div class="app min-h-screen flex flex-col">
+    <div class="image-container fixed inset-0">
+      <img src="@/assets/header.jpg" alt="About Image" class="w-full h-full object-cover" />
     </div>
     <Menu />
-    <div class="content">
+    <div class="content flex-1 pt-10vw overflow-y-auto mx-0.5vw">
       <router-view></router-view>
     </div>
     <Footer />
@@ -17,6 +17,7 @@ import Footer from '@/components/Footer.vue';
 import { gsap } from 'gsap';
 import { onBeforeRouteLeave } from 'vue-router';
 </script>
+
 
 <style scoped>
 .app {
@@ -46,5 +47,16 @@ import { onBeforeRouteLeave } from 'vue-router';
   width: 100%; /* Make sure the image fills the container */
   height: 100%; /* Make sure the image fills the container */
   object-fit: cover; /* Maintain aspect ratio and cover the entire container */
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  z-index: 1000; /* Ensure the footer is above other elements */
 }
 </style>

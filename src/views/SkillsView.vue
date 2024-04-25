@@ -1,9 +1,9 @@
 <template>
     <div class="skills">
-    <Menu />
-    <h1>Skillies</h1>
-    <Footer />
-</div>
+        <Menu />
+        <h1 class="text-3xl font-bold mb-4">Skillies</h1>
+        <Footer />
+    </div>
 </template>
 
 <script setup lang="ts">

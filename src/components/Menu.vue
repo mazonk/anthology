@@ -6,15 +6,17 @@
     <RouterLink to="/skills" class="menuButton" ref="skillsButton">skills.</RouterLink>
     <RouterLink to="/contact" class="menuButton" ref="contactButton">contact.</RouterLink>
     <!-- Buttons with icons -->
-    <a href="https://www.linkedin.com/" target="_blank" class="menuButton"><i class="fab fa-linkedin"></i> LinkedIn</a>
-    <a href="https://www.github.com/" target="_blank" class="menuButton"><i class="fab fa-github"></i> GitHub</a>
+    <a href="https://www.linkedin.com/" target="_blank" class="menuButton flex items-center"><i class="fab fa-linkedin mr-1"></i> LinkedIn</a>
+    <a href="https://www.github.com/" target="_blank" class="menuButton flex items-center"><i class="fab fa-github mr-1"></i> GitHub</a>
   </div>
 </template>
 
 <script setup>
 import { RouterLink } from 'vue-router';
-import { gsap } from 'gsap';
+import { gsap } from "gsap";
 import { ref, onMounted } from 'vue';
+
+gsap.registerPlugin('gsap.registerPlugin', 'gsap.registerPlugin', 'gsap.registerPlugin', 'gsap.registerPlugin');
 
 const menu = ref(null);
 
@@ -44,6 +46,7 @@ window.addEventListener('beforeunload', () => {
 });
 </script>
 
+
 <style scoped>
 .menu {
   position: fixed; /* Fix the menu container in place */
@@ -63,13 +66,13 @@ window.addEventListener('beforeunload', () => {
   margin-bottom: 25%;
   padding: 8px 16px; /* Add padding for better appearance */
   font-weight: bold; /* Set font weight */
-  color: orange; /* Set text color */
+  color: #C252E1; /* Set text color */
   transition: background-color 0.3s; /* Add transition for background-color */
 }
 
 .menu a:hover {
-  background-color: #F28729; /* Change background color on hover */
-  color:black ;
+  background-color: #6ECBF5; /* Change background color on hover */
+  color:#2A2356 ;
   size: 40;
 }
 </style>
